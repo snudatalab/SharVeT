@@ -3,6 +3,8 @@ SharVeT is an accurate and efficient parameter sharing framework, which performs
 
 This codebase is based on Basis_Sharing [[link]](https://github.com/TUDa-HWAI/Basis_Sharing).
 
+> ✨ Upcoming Update: Hybrid model support is coming soon! We plan to extend SharVeT to Transformer–Mamba architectures such as Qwen3-Next and Nemotron-H in a future update.
+
 ### Repository layout
 - `src/`
   - `train.py`: training loop and evaluation hooks
