@@ -65,3 +65,13 @@ See `run/test.yaml`. Top-level sections are merged into a single config object.
   - `dataset_cache_dir`, `calibration_size`, `calib_batch_size`
 ---
 
+## Reference
+
+If you use this code, please cite the following paper.
+```bibtex
+@misc{sharvet,
+  title={SharVeT: Similarity-aware Parameter Sharing with \\ Vector-based Tuning for Efficient LLM Compression},
+  author={Yun, Jeongin and Lee, Jaeri and Kim, Jongjin and Kim, Minjun and Song, Jinho and Kang, U},
+  year={2026},
+  booktitle={The 64th Annual Meeting of the Association for Computational Linguistics}
+}
