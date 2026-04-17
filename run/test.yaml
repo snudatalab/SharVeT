@@ -1,0 +1,50 @@
+model_args:
+  model_type: "llama"
+  model_name: "meta-llama/Meta-Llama-3-8B" 
+  k_name: "self_attn.k_proj"
+  q_name: "self_attn.q_proj"
+  v_name: "self_attn.v_proj"
+  o_name: "self_attn.o_proj"
+  up_name: "mlp.up_proj"
+  down_name: "mlp.down_proj"
+  gate_name: "mlp.gate_proj"
+  num_group: 15
+  strategy: "similarity"
+  include_bias_in_similarity: false
+  compression_ratio: 50
+  context_length: 1024
+  stride: 1024
+  share_part:
+    - "v"
+    - "k"
+    - "q"
+    - "up"
+    - "gate"
+  private_part:
+    - "down"
+    - "o"
+  on_refinement: true
+  norm_type: "exp"
+  minimum_basis_ratio: 0.9
+
+training args:
+  learning_rate: 0.001
+  train_epoch: 2
+  train_batch_size: 2
+  train_num_workers: 16
+  distill_weight: 0.001
+  feature_weight: 5
+  distill_temperature: 1.0
+  l2_weight: 0.00000001
+  pin_memory: true
+  fp16: true
+  gradient_accumulation_steps: 1
+  max_grad_norm: 1.0
+
+calibration_args:
+  dataset_name: "slimpajama"
+  build_calib: true
+  calib_path: "./calib/tinyllama-1.1b/slimpajama/"
+  dataset_cache_dir: null
+  calibration_size: 256
+  calib_batch_size: 16
