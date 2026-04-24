@@ -67,6 +67,18 @@ See `run/test.yaml`. Top-level sections are merged into a single config object.
   - `dataset_cache_dir`, `calibration_size`, `calib_batch_size`
 ---
 
+## License
+
+This code is released under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/).
+
+- ✅ Free for academic research, education, and personal use
+- ✅ Modifications and derivative works allowed for noncommercial purposes
+- ❌ Commercial use is prohibited
+
+For commercial licensing, contact: **yji00828@snu.ac.kr**
+
+---
+
 ## Reference
 
 If you use this code, please cite the following paper.
